@@ -1,0 +1,230 @@
+---
+import LazyVideo from './LazyVideo.astro';
+const G = "rgb(206, 206, 202)";
+---
+<section class="section">
+
+  <!-- ── framer-4pu8io ─────────────────────────────────────────────────
+       1bk14ix: s4   mf99lq: s8   @<768: оба 1/-1                       -->
+  <div class="grid">
+    <div class="cell ar-65 s4 e-1bk14ix"><LazyVideo src="/assets/videos/s-v1.mp4" /></div>
+    <div class="cell ar-73 s8 e-mf99lq"><img src="/assets/images/s-catalog.jpg" alt="" loading="lazy" /></div>
+  </div>
+
+  <!-- ── framer-1maxed5 ────────────────────────────────────────────────
+       1ke9duh: s6   1vq3orf: s4
+       @<1024: space s6, text s6
+       @<768:  space hidden, text 1/-1                                   -->
+  <div class="grid g-1maxed5">
+    <div class="spacer s6 e-1ke9duh"></div>
+    <div class="text-cell s4 t-1vq3orf">
+      <div class="tw">
+        <div class="real" style="transform:none">
+          <p>samokat is one of the largest instant grocery delivery services with 10 million orders per month and 1000+ dark stores in 103 cities.</p>
+          <p>samokat's identity is shaped by two basic principles — simplicity and non-interference. we have paid attention to visual ecology, which allows people to focus on the most important thing — searching and choosing goods. in doing so, we have moved away from pure utilitarianism, making the experience aesthetically fulfilling. all of this allows samokat to stand out against the background of many competitors, whose identity is based on old-fashioned offline retail approaches.</p>
+          <p>take a look at<br>
+            <a href="https://apps.apple.com/us/app/samokat-food-delivery/id1401500803" target="_blank" rel="noopener" class="lnk">app store</a><br>
+            <a href="https://play.google.com/store/apps/details?id=ru.sbcs.store&hl=ru" target="_blank" rel="noopener" class="lnk">google play</a>
+          </p>
+        </div>
+        <div class="shadow" style="transform:rotateX(180deg)" aria-hidden="true">
+          <p style={`color:${G}`}>samokat is one of the largest instant grocery delivery services...</p>
+          <p style={`color:${G}`}>samokat's identity is shaped by two basic principles...</p>
+          <p style={`color:${G}`}>take a look at<br>app store<br>google play</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── framer-19ltzei ────────────────────────────────────────────────
+       1i6ilug: s4   1g3rum5: s3
+       @<768: space s3, видео s3                                         -->
+  <div class="grid g-19ltzei">
+    <div class="spacer s4 e-1i6ilug"></div>
+    <div class="cell ar-65 s3 e-1g3rum5"><img src="/assets/images/s-dscf.jpg" alt="" loading="lazy" /></div>
+  </div>
+
+  <!-- ── framer-8phphr ────────────────────────────────────────────────
+       m93bvp: s8 (нет изменений)
+       1rvww5x: s8, @<768 → s6
+       1ssqzj7: s6 (empty), @<768 → hidden                             -->
+  <!-- ── g-8phphr: видео s4, spacer скрыт, фото s4
+       @<768: видео s4, spacer s3 между ними, фото s3                  -->
+  <div class="grid">
+    <div class="cell ar-73 s4 e-m93bvp"><LazyVideo src="/assets/videos/s-v2.mp4" /></div>
+    <div class="e-1ssqzj7"></div>
+    <div class="cell ar-73 s4 e-1rvww5x"><img src="/assets/images/s-profile.jpg" alt="" loading="lazy" /></div>
+  </div>
+
+  <!-- ── framer-1q27r11 ────────────────────────────────────────────────
+       1bdtoui (empty)    s2      0-height  (hide ≤768px)
+       1izp6r4-container  s10     ar-154
+         @1024px → s12     @768px → 1/-1
+       1wbrbwc            s12     ar-63    (full row, wraps)             -->
+  <!-- ── g-1q27r11: spacer s1, video1 s5, video2 s6 — выравнивание по низу
+       @<1024: spacer hidden, video1 s6, video2 s6
+       @<768: оба 1/-1                                                   -->
+  <div class="grid g-1q27r11">
+    <div class="spacer s1 e-1bdtoui"></div>
+    <div class="cell ar-154 s5 e-1izp6r4"><LazyVideo src="/assets/videos/s-v3.mp4" /></div>
+    <div class="cell ar-63  s6 e-1wbrbwc"><img src="/assets/images/s-cart.jpg" alt="" loading="lazy" /></div>
+  </div>
+
+  <!-- ── framer-fc2ucz — полная ширина (width:100%) ─────────────────── -->
+  <div class="grid">
+    <div class="cell ar-158 s12"><img src="/assets/images/s-pages.jpg" alt="" loading="lazy" /></div>
+  </div>
+
+  <!-- ── framer-1u1k25l ────────────────────────────────────────────────
+       hlc6ez-container   s8      ar-156
+         @1024px → s10
+       142xlu5-container  s6      ar-65
+         @1024px → s8                                                    -->
+  <div class="grid g-1u1k25l">
+    <div class="cell ar-156 s4 el-142xlu5"><LazyVideo src="/assets/videos/s-v4.mp4" /></div>
+    <div class="cell ar-69  s3 el-1sppq0e"><LazyVideo src="/assets/videos/s-v5.mp4" /></div>
+  </div>
+
+  <!-- ── g-xjiuuq: видео s8, spacer скрыт, фото s4
+       @<768: spacer s2, видео s6, фото s4                              -->
+  <div class="grid">
+    <div class="cell ar-73 s8 e-17yqivx"><LazyVideo src="/assets/videos/s-v6.mp4" /></div>
+    <div class="e-n8ez3n"></div>
+    <div class="cell ar-66 s4 e-1a0uxvs"><img src="/assets/images/s-onboarding.jpg" alt="" loading="lazy" /></div>
+  </div>
+
+  <!-- ── hlc6ez: s3 + spacer s2, @<1024 s5, @<768 s5 + spacer hidden ── -->
+  <div class="grid">
+    <div class="spacer s2 el-hlc6ez-spacer"></div>
+    <div class="cell ar-73 s3 el-hlc6ez"><LazyVideo src="/assets/videos/s-v7.mp4" /></div>
+  </div>
+
+</section>
+
+<style>
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+
+  /* ── Text cell ── */
+  .text-cell { overflow: visible; min-width: 0; }
+  .tw { position: relative; overflow: hidden; }
+  .real {
+    position: relative; z-index: 1;
+    display: flex; flex-direction: column; gap: 16px;
+    font-family: var(--font); font-size: var(--fs);
+    line-height: var(--lh); letter-spacing: var(--ls);
+    color: var(--text); font-weight: 400; word-break: break-word;
+  }
+  .real p { margin: 0; }
+  .shadow {
+    position: absolute; top: 0; left: 0; width: 100%;
+    z-index: 0; opacity: 0.6;
+    display: flex; flex-direction: column; gap: 16px;
+    font-family: var(--font); font-size: var(--fs);
+    line-height: var(--lh); font-weight: 400;
+    pointer-events: none; user-select: none;
+  }
+  .shadow p { margin: 0; }
+  .lnk {
+    display: inline-block; padding-left: 1.5em;
+    color: var(--muted);
+    transition: color 0.2s cubic-bezier(.44,0,.56,1);
+  }
+  .lnk:hover { color: var(--text); }
+
+  /* ── Breakpoint overrides ── */
+
+  /* g-4pu8io: <768 оба на всю ширину */
+  @media (max-width: 767px) {
+    .e-1bk14ix { grid-column: 1 / -1; }
+    .e-mf99lq  { grid-column: 1 / -1; }
+  }
+
+  /* g-19ltzei: <768 space s3 */
+  @media (max-width: 767px) {
+    .e-1i6ilug { grid-column: auto / span 3; }
+  }
+
+  /* g-8phphr: spacer скрыт по умолчанию, при <768 s3 между ячейками */
+  .e-1ssqzj7 { display: none; }
+  @media (max-width: 767px) {
+    .e-1ssqzj7 { display: block; grid-column: auto / span 3; }
+    .e-1rvww5x { grid-column: auto / span 3; }
+  }
+
+  /* g-1q27r11 */
+  .g-1q27r11 { align-items: end; }
+  @media (max-width: 1023px) {
+    .e-1bdtoui { display: none; }
+    .e-1izp6r4 { grid-column: auto / span 6; }
+    .e-1wbrbwc { grid-column: auto / span 6; }
+  }
+  @media (max-width: 767px) {
+    .e-1izp6r4 { grid-column: 1 / -1; }
+    .e-1wbrbwc { grid-column: 1 / -1; }
+  }
+
+  /* g-xjiuuq: spacer скрыт по умолчанию */
+  .e-n8ez3n { display: none; }
+  @media (max-width: 767px) {
+    .e-17yqivx { grid-column: auto / span 6; }
+    .e-n8ez3n  { display: block; grid-column: auto / span 2; }
+    .e-1a0uxvs { grid-column: auto / span 4; }
+  }
+
+  /* g-1maxed5: <1024 оба s6, <768 space hidden + text full */
+  @media (max-width: 1023px) {
+    .t-1vq3orf  { grid-column: auto / span 6; }
+  }
+  @media (max-width: 767px) {
+    .e-1ke9duh  { display: none; }
+    .t-1vq3orf  { grid-column: 1 / -1; }
+  }
+
+  /* g-1u1k25l: выравнивание по низу */
+  .g-1u1k25l { align-items: end; }
+
+  @media (max-width: 1023px) {
+    .el-142xlu5 { grid-column: auto / span 5; }
+    .el-1sppq0e { grid-column: auto / span 4; }
+  }
+  @media (max-width: 767px) {
+    .el-142xlu5 { grid-column: auto / span 3; }
+    .el-1sppq0e { grid-column: auto / span 3; }
+  }
+
+  /* hlc6ez */
+  @media (max-width: 1023px) {
+    .el-hlc6ez { grid-column: auto / span 5; }
+  }
+  @media (max-width: 767px) {
+    .el-hlc6ez        { grid-column: auto / span 5; }
+    .el-hlc6ez-spacer { display: none; }
+  }
+
+  /* 1024–1439px */
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    .t-1vq3orf  { grid-column: auto / span 6; }
+    .el-1izp6r4 { grid-column: auto / span 12; }
+  }
+
+  /* 768px */
+  @media (max-width: 768px) {
+    .hide-768  { display: none; }
+    .rv-1rvww5x { grid-column: auto / span 6; }   /* span4→span3 */
+    .t-1vq3orf  { grid-column: 1 / -1; }
+    .el-1izp6r4 { grid-column: 1 / -1; }
+
+  }
+
+  /* ≤600px */
+  @media (max-width: 600px) {
+    .mob-full    { grid-column: 1 / -1; }
+    .el-1a0uxvs  { grid-column: auto / span 8; }
+    .spc-1i6ilug { grid-column: auto / span 6; }
+  }
+</style>

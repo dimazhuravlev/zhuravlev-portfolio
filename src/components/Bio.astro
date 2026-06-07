@@ -1,0 +1,111 @@
+---
+const G = "rgb(206, 206, 202)";
+---
+<section class="about">
+  <div class="grid">
+
+    <!-- col 1: bio paragraphs — s4 (4/12) -->
+    <div class="col s4">
+      <div class="real" style="transform:none">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dima zhuravlev is&nbsp;a designer focused on&nbsp;shaping human experience across people's emotions, interconnecting product and&nbsp;visual brand language, and&nbsp;merging usability and&nbsp;aesthetics</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my practice plays in the margins between hands-on concept crafting and&nbsp;inspiring and&nbsp;motivating design teams with shared values and&nbsp;principles</p>
+      </div>
+      <div class="shadow" style="transform:rotateX(180deg)" aria-hidden="true">
+        <p style={`color:${G}`}>dima zhuravlev is a designer focused on shaping human experience across people's emotions, interconnecting product and visual brand language, and merging usability and aesthetics</p>
+        <p style={`color:${G}`}>my practice plays in the margins between hands-on concept crafting and inspiring and motivating design teams with shared values and principles</p>
+      </div>
+    </div>
+
+    <!-- col 2: current role — s4 -->
+    <div class="col s4">
+      <div class="real" style="transform:none">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currently lead product designer at&nbsp;<a href="https://play.yango.com/?lang=en" target="_blank" rel="noopener">yango play</a>, previously led the&nbsp;customer experience design team at&nbsp;<a href="https://samokat.ru/" target="_blank" rel="noopener">samokat</a></p>
+      </div>
+      <div class="shadow" style="transform:rotateX(180deg)" aria-hidden="true">
+        <p style={`color:${G}`}>currently lead product designer at yango play, previously led the customer experience design team at samokat</p>
+      </div>
+    </div>
+
+    <!-- col 3: contacts — s4 -->
+    <div class="col s4">
+      <div class="real" style="transform:none">
+        <p>feel free to reach out<br>
+          <a href="mailto:dmitryzhur@gmail.com" class="cl">dmitryzhur@gmail.com</a><br>
+          <a href="https://t.me/dimazhuravlev" target="_blank" rel="noopener" class="cl">telegram</a><br>
+          <a href="https://www.instagram.com/mityazhuravlev/" target="_blank" rel="noopener" class="cl">instagram</a><br>
+          <a href="https://www.linkedin.com/in/dmitii-zhuravlev-434769179" target="_blank" rel="noopener" class="cl">linkedin</a><br>
+          <a href="https://drive.google.com/file/d/1jzIo8-1FaW92JgHtVqxIx7Aq4TH0aXMQ/view?usp=sharing" target="_blank" rel="noopener" class="cl">cv</a>
+        </p>
+      </div>
+      <div class="shadow" style="transform:rotateX(180deg)" aria-hidden="true">
+        <p style={`color:${G}`}>feel free to reach out<br>dmitryzhur@gmail.com<br>telegram<br>instagram<br>linkedin<br>cv</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .about { width: 100%; }
+
+  /* Bio column: grid cell + text positioning context */
+  .col {
+    position: relative;
+    overflow: hidden;
+    padding-right: 48px;
+    min-width: 0;
+  }
+
+  .real {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+    font-family: var(--font);
+    font-size: var(--fs);
+    line-height: var(--lh);
+    letter-spacing: var(--ls);
+    color: var(--text);
+    font-weight: 400;
+    word-break: break-word;
+  }
+  .real p { margin: 0; }
+
+  .shadow {
+    position: absolute;
+    top: 0; left: 0;
+    width: 90%;
+    opacity: 0.6;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: var(--font);
+    font-size: var(--fs);
+    line-height: var(--lh);
+    letter-spacing: var(--ls);
+    font-weight: 400;
+    word-break: break-word;
+    pointer-events: none;
+    user-select: none;
+  }
+  .shadow p { margin: 0; }
+
+  .cl {
+    display: inline-block;
+    padding-left: 1.5em;
+    color: var(--muted);
+    transition: color 0.2s cubic-bezier(.44,0,.56,1);
+  }
+  .cl:hover { color: var(--text); }
+
+  /* <768: каждая колонка на всю ширину */
+  @media (max-width: 767px) {
+    .col {
+      grid-column: 1 / -1 !important;
+      padding-right: 0;
+    }
+    .shadow { width: 100%; }
+  }
+</style>

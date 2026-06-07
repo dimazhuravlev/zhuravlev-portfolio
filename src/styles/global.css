@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "YouHaveNeverSeenThisFont";
+  src: url("/assets/fonts/3A18EE_0_0.woff2") format("woff2"),
+       url("/assets/fonts/3A18EE_0_0.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg:     #e1e0df;
+  --text:   #282723;
+  --ghost:  rgb(206, 206, 202);
+  --muted:  #787671;
+  --gap:    8px;
+  --pad:    8px;
+  --font:   "YouHaveNeverSeenThisFont", sans-serif;
+  --fs:     16px;
+  --lh:     19px;
+  --ls:     -0.1px;
+  --radius: 6px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font);
+  font-size: var(--fs);
+  line-height: var(--lh);
+  letter-spacing: var(--ls);
+  color: var(--text);
+  text-transform: lowercase;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, figure { margin: 0; padding: 0; }
+
+a {
+  color: var(--muted);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  transition: color 0.2s cubic-bezier(.44, 0, .56, 1);
+}
+a:hover { color: var(--text); }
+
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; }
+
+img, video { display: block; width: 100%; border-radius: var(--radius); }
+.cell img, .cell video { height: 100%; object-fit: cover; border-radius: 0; }
+
+/* ─────────────────────────────────────────────
+   Page container — 8px padding всегда
+───────────────────────────────────────────── */
+.container {
+  width: 100%;
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* ─────────────────────────────────────────────
+   Modular grid
+   ≥768px  → 12 колонок
+   <768px  → 6 колонок
+───────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gap);
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .grid  { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  /* span-классы пересчитываются: 12-col → 6-col (делим на 2, мин. 1) */
+  .s1             { grid-column: auto / span 1; }
+  .s2             { grid-column: auto / span 1; }
+  .s3             { grid-column: auto / span 2; }
+  .s4             { grid-column: auto / span 2; }
+  .s5             { grid-column: auto / span 3; }
+  .s6             { grid-column: auto / span 3; }
+  .s7             { grid-column: auto / span 4; }
+  .s8             { grid-column: auto / span 4; }
+  .s9             { grid-column: auto / span 5; }
+  .s10            { grid-column: auto / span 5; }
+  .s11            { grid-column: auto / span 6; }
+  .s12            { grid-column: auto / span 6; }
+  .sfull          { grid-column: 1 / -1;        }
+  .spacer         { display: none !important;   }
+}
+
+/* Full-width — работает на всех размерах сетки */
+.sfull { grid-column: 1 / -1; }
+
+/* Утилиты span — значения 1-12 */
+.s1  { grid-column: auto / span 1;  }
+.s2  { grid-column: auto / span 2;  }
+.s3  { grid-column: auto / span 3;  }
+.s4  { grid-column: auto / span 4;  }
+.s5  { grid-column: auto / span 5;  }
+.s6  { grid-column: auto / span 6;  }
+.s7  { grid-column: auto / span 7;  }
+.s8  { grid-column: auto / span 8;  }
+.s9  { grid-column: auto / span 9;  }
+.s10 { grid-column: auto / span 10; }
+.s11 { grid-column: auto / span 11; }
+.s12 { grid-column: auto / span 12; }
+
+/* ─────────────────────────────────────────────
+   Ячейка медиа
+───────────────────────────────────────────── */
+.cell {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+/* ─────────────────────────────────────────────
+   Aspect ratios из Framer CSS
+───────────────────────────────────────────── */
+.ar-63  { aspect-ratio: 0.6321; }
+.ar-65  { aspect-ratio: 0.6481; }
+.ar-66  { aspect-ratio: 0.6569; }
+.ar-69  { aspect-ratio: 0.6936; }
+.ar-73  { aspect-ratio: 0.7330; }
+.ar-76  { aspect-ratio: 0.7675; }
+.ar-111 { aspect-ratio: 1.1143; }
+.ar-122 { aspect-ratio: 1.2207; }
+.ar-129 { aspect-ratio: 1.2922; }
+.ar-154 { aspect-ratio: 1.5366; }
+.ar-156 { aspect-ratio: 1.5650; }
+.ar-158 { aspect-ratio: 1.5787; }
+.ar-170 { aspect-ratio: 1.6962; }
+
+/* ─────────────────────────────────────────────
+   Spacers
+───────────────────────────────────────────── */
+.spacer { background: transparent; }
+.h77    { height: 77px;  }
+.h118   { height: 118px; }
