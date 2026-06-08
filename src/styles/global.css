@@ -18,7 +18,7 @@
   --fs:     16px;
   --lh:     19px;
   --ls:     -0.1px;
-  --radius: 6px;
+  --radius: 8px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -119,6 +119,21 @@ img, video { display: block; width: 100%; border-radius: var(--radius); }
   position: relative;
   overflow: hidden;
   border-radius: var(--radius);
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.cell img,
+.cell video {
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(.44, 0, .56, 1);
+}
+
+.cell img.loaded,
+.cell video.loaded {
+  opacity: 1;
+  image-rendering: auto;
 }
 
 /* ─────────────────────────────────────────────
@@ -136,6 +151,7 @@ img, video { display: block; width: 100%; border-radius: var(--radius); }
 .ar-154 { aspect-ratio: 1.5366; }
 .ar-156 { aspect-ratio: 1.5650; }
 .ar-158 { aspect-ratio: 1.5787; }
+.ar-160 { aspect-ratio: 1.6000; }
 .ar-170 { aspect-ratio: 1.6962; }
 
 /* ─────────────────────────────────────────────

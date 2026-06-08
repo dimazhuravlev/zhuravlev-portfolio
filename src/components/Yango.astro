@@ -1,0 +1,28 @@
+---
+import LazyVideo from './LazyVideo.astro';
+import placeholders from '../data/placeholders.json';
+const ph = (src: string) => `background-image: url('${placeholders[src as keyof typeof placeholders]}')`;
+---
+<section class="section">
+
+  <div class="grid">
+    <a href="https://music.yango.com/" target="_blank" rel="noopener" class="cell ar-160 s6 el-y1" style={ph('/assets/videos/y-v1.mp4')}><LazyVideo src="/assets/videos/y-v1.mp4" /></a>
+  </div>
+
+</section>
+
+<style>
+  .section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+  }
+@media (max-width: 1023px) {
+    .el-y1 { grid-column: auto / span 8; }
+  }
+  @media (max-width: 767px) {
+    .el-y1 { grid-column: 1 / -1; }
+  }
+
+</style>

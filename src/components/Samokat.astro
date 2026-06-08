@@ -1,20 +1,18 @@
 ---
 import LazyVideo from './LazyVideo.astro';
+import placeholders from '../data/placeholders.json';
 const G = "rgb(206, 206, 202)";
+const ph = (src: string) => `background-image: url('${placeholders[src as keyof typeof placeholders]}')`;
 ---
 <section class="section">
 
-  <!-- ── framer-4pu8io ─────────────────────────────────────────────────
-       1bk14ix: s4   mf99lq: s8   @<768: оба 1/-1                       -->
+  <p class="label">samokat 2019–2022</p>
+
   <div class="grid">
-    <div class="cell ar-65 s4 e-1bk14ix"><LazyVideo src="/assets/videos/s-v1.mp4" /></div>
-    <div class="cell ar-73 s8 e-mf99lq"><img src="/assets/images/s-catalog.jpg" alt="" loading="lazy" /></div>
+    <div class="cell ar-65 s4 e-1bk14ix" style={ph('/assets/videos/s-v1.mp4')}><LazyVideo src="/assets/videos/s-v1.mp4" /></div>
+    <div class="cell ar-73 s8 e-mf99lq" style={ph('/assets/images/s-catalog.jpg')}><img src="/assets/images/s-catalog.jpg" alt="" loading="lazy" /></div>
   </div>
 
-  <!-- ── framer-1maxed5 ────────────────────────────────────────────────
-       1ke9duh: s6   1vq3orf: s4
-       @<1024: space s6, text s6
-       @<768:  space hidden, text 1/-1                                   -->
   <div class="grid g-1maxed5">
     <div class="spacer s6 e-1ke9duh"></div>
     <div class="text-cell s4 t-1vq3orf">
@@ -36,67 +34,41 @@ const G = "rgb(206, 206, 202)";
     </div>
   </div>
 
-  <!-- ── framer-19ltzei ────────────────────────────────────────────────
-       1i6ilug: s4   1g3rum5: s3
-       @<768: space s3, видео s3                                         -->
   <div class="grid g-19ltzei">
     <div class="spacer s4 e-1i6ilug"></div>
-    <div class="cell ar-65 s3 e-1g3rum5"><img src="/assets/images/s-dscf.jpg" alt="" loading="lazy" /></div>
+    <div class="cell ar-65 s3 e-1g3rum5" style={ph('/assets/images/s-dscf.jpg')}><img src="/assets/images/s-dscf.jpg" alt="" loading="lazy" /></div>
   </div>
 
-  <!-- ── framer-8phphr ────────────────────────────────────────────────
-       m93bvp: s8 (нет изменений)
-       1rvww5x: s8, @<768 → s6
-       1ssqzj7: s6 (empty), @<768 → hidden                             -->
-  <!-- ── g-8phphr: видео s4, spacer скрыт, фото s4
-       @<768: видео s4, spacer s3 между ними, фото s3                  -->
   <div class="grid">
-    <div class="cell ar-73 s4 e-m93bvp"><LazyVideo src="/assets/videos/s-v2.mp4" /></div>
+    <div class="cell ar-73 s4 e-m93bvp" style={ph('/assets/videos/s-v2.mp4')}><LazyVideo src="/assets/videos/s-v2.mp4" /></div>
     <div class="e-1ssqzj7"></div>
-    <div class="cell ar-73 s4 e-1rvww5x"><img src="/assets/images/s-profile.jpg" alt="" loading="lazy" /></div>
+    <div class="cell ar-73 s4 e-1rvww5x" style={ph('/assets/images/s-profile.jpg')}><img src="/assets/images/s-profile.jpg" alt="" loading="lazy" /></div>
   </div>
 
-  <!-- ── framer-1q27r11 ────────────────────────────────────────────────
-       1bdtoui (empty)    s2      0-height  (hide ≤768px)
-       1izp6r4-container  s10     ar-154
-         @1024px → s12     @768px → 1/-1
-       1wbrbwc            s12     ar-63    (full row, wraps)             -->
-  <!-- ── g-1q27r11: spacer s1, video1 s5, video2 s6 — выравнивание по низу
-       @<1024: spacer hidden, video1 s6, video2 s6
-       @<768: оба 1/-1                                                   -->
   <div class="grid g-1q27r11">
     <div class="spacer s1 e-1bdtoui"></div>
-    <div class="cell ar-154 s5 e-1izp6r4"><LazyVideo src="/assets/videos/s-v3.mp4" /></div>
-    <div class="cell ar-63  s6 e-1wbrbwc"><img src="/assets/images/s-cart.jpg" alt="" loading="lazy" /></div>
+    <div class="cell ar-154 s5 e-1izp6r4" style={ph('/assets/videos/s-v3.mp4')}><LazyVideo src="/assets/videos/s-v3.mp4" /></div>
+    <div class="cell ar-63  s6 e-1wbrbwc" style={ph('/assets/images/s-cart.jpg')}><img src="/assets/images/s-cart.jpg" alt="" loading="lazy" /></div>
   </div>
 
-  <!-- ── framer-fc2ucz — полная ширина (width:100%) ─────────────────── -->
   <div class="grid">
-    <div class="cell ar-158 s12"><img src="/assets/images/s-pages.jpg" alt="" loading="lazy" /></div>
+    <div class="cell ar-158 s12" style={ph('/assets/images/s-pages.jpg')}><img src="/assets/images/s-pages.jpg" alt="" loading="lazy" /></div>
   </div>
 
-  <!-- ── framer-1u1k25l ────────────────────────────────────────────────
-       hlc6ez-container   s8      ar-156
-         @1024px → s10
-       142xlu5-container  s6      ar-65
-         @1024px → s8                                                    -->
   <div class="grid g-1u1k25l">
-    <div class="cell ar-156 s4 el-142xlu5"><LazyVideo src="/assets/videos/s-v4.mp4" /></div>
-    <div class="cell ar-69  s3 el-1sppq0e"><LazyVideo src="/assets/videos/s-v5.mp4" /></div>
+    <div class="cell ar-156 s4 el-142xlu5" style={ph('/assets/videos/s-v4.mp4')}><LazyVideo src="/assets/videos/s-v4.mp4" /></div>
+    <div class="cell ar-69  s3 el-1sppq0e" style={ph('/assets/videos/s-v5.mp4')}><LazyVideo src="/assets/videos/s-v5.mp4" /></div>
   </div>
 
-  <!-- ── g-xjiuuq: видео s8, spacer скрыт, фото s4
-       @<768: spacer s2, видео s6, фото s4                              -->
   <div class="grid">
-    <div class="cell ar-73 s8 e-17yqivx"><LazyVideo src="/assets/videos/s-v6.mp4" /></div>
+    <div class="cell ar-73 s8 e-17yqivx" style={ph('/assets/videos/s-v6.mp4')}><LazyVideo src="/assets/videos/s-v6.mp4" /></div>
     <div class="e-n8ez3n"></div>
-    <div class="cell ar-66 s4 e-1a0uxvs"><img src="/assets/images/s-onboarding.jpg" alt="" loading="lazy" /></div>
+    <div class="cell ar-66 s4 e-1a0uxvs" style={ph('/assets/images/s-onboarding.jpg')}><img src="/assets/images/s-onboarding.jpg" alt="" loading="lazy" /></div>
   </div>
 
-  <!-- ── hlc6ez: s3 + spacer s2, @<1024 s5, @<768 s5 + spacer hidden ── -->
   <div class="grid">
     <div class="spacer s2 el-hlc6ez-spacer"></div>
-    <div class="cell ar-73 s3 el-hlc6ez"><LazyVideo src="/assets/videos/s-v7.mp4" /></div>
+    <div class="cell ar-73 s3 el-hlc6ez" style={ph('/assets/videos/s-v7.mp4')}><LazyVideo src="/assets/videos/s-v7.mp4" /></div>
   </div>
 
 </section>
@@ -107,6 +79,12 @@ const G = "rgb(206, 206, 202)";
     display: flex;
     flex-direction: column;
     gap: var(--gap);
+    padding-top: 80px;
+  }
+  .label {
+    font-family: var(--font); font-size: var(--fs);
+    line-height: var(--lh); letter-spacing: var(--ls);
+    color: var(--text); font-weight: 400; margin: 0;
   }
 
   /* ── Text cell ── */
@@ -223,6 +201,7 @@ const G = "rgb(206, 206, 202)";
 
   /* ≤600px */
   @media (max-width: 600px) {
+    .section     { padding-top: 40px; }
     .mob-full    { grid-column: 1 / -1; }
     .el-1a0uxvs  { grid-column: auto / span 8; }
     .spc-1i6ilug { grid-column: auto / span 6; }

@@ -28,6 +28,7 @@ const { src, class: cls, style } = Astro.props;
           if (!video.src) {
             video.src = video.dataset.src!;
             video.load();
+            video.addEventListener('canplay', () => video.classList.add('loaded'), { once: true });
           }
           video.play().catch(() => {});
         } else {
